@@ -7,9 +7,9 @@ https://developer.apple.com/av-foundation/
 
 ## Support
 
-|                       |  [8.x.x]  |  [7.x.x]  | 
-| --------------------- |:---------:|:---------:|
-| [Xcode Version ][1]   |           |     x     |
+|                       |  [9.x.x]  |  [8.x.x]  |  [7.x.x]  | 
+| --------------------- |:---------:|:---------:|:---------:|
+| [Xcode Version ][1]   |     x     |     x     |     x     |
 
 
 [1]: http://developer.apple.com/xcode/
