@@ -58,13 +58,13 @@ extension ViewController {
     
     fileprivate func prepareCamera() {
         self.videoSession = AVCaptureSession()
-        self.videoSession.sessionPreset = AVCaptureSessionPresetPhoto
+        self.videoSession.sessionPreset = AVCaptureSession.Preset.photo
         self.previewLayer = AVCaptureVideoPreviewLayer(session: videoSession)
-        self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        self.previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         
         if let devices = AVCaptureDevice.devices() as? [AVCaptureDevice] {
             for device in devices {
-                if device.hasMediaType(AVMediaTypeVideo) {
+                if device.hasMediaType(AVMediaType.video) {
                     cameraDevice = device
                     
                     if cameraDevice != nil  {
@@ -77,9 +77,9 @@ extension ViewController {
                             }
                             
                             if let previewLayer = self.previewLayer {
-                                if previewLayer.connection.isVideoMirroringSupported {
-                                    previewLayer.connection.automaticallyAdjustsVideoMirroring = false
-                                    previewLayer.connection.isVideoMirrored = true
+                                if (previewLayer.connection?.isVideoMirroringSupported)! {
+                                    previewLayer.connection?.automaticallyAdjustsVideoMirroring = false
+                                    previewLayer.connection?.isVideoMirrored = true
                                 }
                                 
                                 previewLayer.frame = self.view.bounds
@@ -108,7 +108,7 @@ extension ViewController {
 
 extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     
-    internal func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
+    internal func captureOutput(_ captureOutput: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         print(Date())
     }
 }
