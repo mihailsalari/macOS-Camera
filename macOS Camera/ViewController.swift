@@ -7,26 +7,17 @@
 //
 
 import Cocoa
-import AVFoundation
 
 final class ViewController: NSViewController {
-  
-  // MARK: - Properties
-  
   private var cameraManager: CameraManagerProtocol!
-  
-  
-  // MARK: - LyfeCicle
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    // Do any additional setup after loading the view.
     do {
       cameraManager = try CameraManager(containerView: view)
       cameraManager.delegate = self
-      try cameraManager.startSession()
     } catch {
+      // Cath the error here
       print(error.localizedDescription)
     }
   }
@@ -34,6 +25,26 @@ final class ViewController: NSViewController {
   override var representedObject: Any? {
     didSet {
       // Update the view, if already loaded.
+    }
+  }
+  
+  override func viewDidAppear() {
+    super.viewDidAppear()
+    do {
+      try cameraManager.startSession()
+    } catch {
+      // Cath the error here
+      print(error.localizedDescription)
+    }
+  }
+  
+  override func viewDidDisappear() {
+    super.viewDidDisappear()
+    do {
+      try cameraManager.stopSession()
+    } catch {
+      // Cath the error here
+      print(error.localizedDescription)
     }
   }
 }
