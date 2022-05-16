@@ -30,6 +30,86 @@ https://developer.apple.com/av-foundation/
 * CameraManager
 * CameraManagerDelegate
 
+## Usage:
+
+1. Drag and drop the ```CameraManager.swift``` into your macOS Xcode project.
+
+On ```viewDidLoad``` method, instantiate the ```CameraManager``` object:
+```swift
+    do {
+      cameraManager = try CameraManager(containerView: view)
+    } catch {
+      // Cath the error here
+    }
+```
+
+2. Set the CameraManagerDelegate
+
+After you instantiated the camera manager, set it's delegate in this way:
+```swift
+    cameraManager.delegate = self
+```
+3. To start camera, run the following snippet on ```viewDidLoad``` or ```viewDidAppear``` method:
+```swift
+    do {
+      try cameraManager.startSession()
+    } catch {
+      // Cath the error here
+    }
+```
+
+## Full snippet code:
+
+```swift
+      private var cameraManager: CameraManagerProtocol!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    do {
+      cameraManager = try CameraManager(containerView: view)
+      cameraManager.delegate = self
+    } catch {
+      // Cath the error here
+      print(error.localizedDescription)
+    }
+  }
+  
+  override var representedObject: Any? {
+    didSet {
+      // Update the view, if already loaded.
+    }
+  }
+  
+  override func viewDidAppear() {
+    super.viewDidAppear()
+    do {
+      try cameraManager.startSession()
+    } catch {
+      // Cath the error here
+      print(error.localizedDescription)
+    }
+  }
+  
+  override func viewDidDisappear() {
+    super.viewDidDisappear()
+    do {
+      try cameraManager.stopSession()
+    } catch {
+      // Cath the error here
+      print(error.localizedDescription)
+    }
+  }
+```
+
+```swift
+    extension YourViewController: CameraManagerDelegate {
+        func cameraManager(_ output: CameraCaptureOutput, didOutput sampleBuffer: CameraSampleBuffer, 
+                             from connection: CameraCaptureConnection) {
+            print(Date())
+        }
+    }
+```
+
 ## Bug Reports & Feature Requests
 
 No Bugs
