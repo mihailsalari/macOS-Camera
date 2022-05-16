@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EBAE9C5C2832D5830061CDEE /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE9C5B2832D5830061CDEE /* CameraManager.swift */; };
+		EBAE9C5D2832D5830061CDEE /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE9C5B2832D5830061CDEE /* CameraManager.swift */; };
 		F07A15CC1EADFDC500E8FA1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07A15CB1EADFDC500E8FA1B /* AppDelegate.swift */; };
 		F07A15CE1EADFDC500E8FA1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07A15CD1EADFDC500E8FA1B /* ViewController.swift */; };
 		F07A15D01EADFDC500E8FA1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F07A15CF1EADFDC500E8FA1B /* Assets.xcassets */; };
@@ -33,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EBAE9C5B2832D5830061CDEE /* CameraManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		F07A15C81EADFDC500E8FA1B /* macOS Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macOS Camera.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F07A15CB1EADFDC500E8FA1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F07A15CD1EADFDC500E8FA1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				F07A15CB1EADFDC500E8FA1B /* AppDelegate.swift */,
+				EBAE9C5B2832D5830061CDEE /* CameraManager.swift */,
 				F07A15CD1EADFDC500E8FA1B /* ViewController.swift */,
 				F07A15CF1EADFDC500E8FA1B /* Assets.xcassets */,
 				F07A15D11EADFDC500E8FA1B /* Main.storyboard */,
@@ -209,7 +213,7 @@
 			};
 			buildConfigurationList = F07A15C31EADFDC500E8FA1B /* Build configuration list for PBXProject "macOS Camera" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -259,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F07A15CE1EADFDC500E8FA1B /* ViewController.swift in Sources */,
+				EBAE9C5C2832D5830061CDEE /* CameraManager.swift in Sources */,
 				F07A15CC1EADFDC500E8FA1B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBAE9C5D2832D5830061CDEE /* CameraManager.swift in Sources */,
 				F07A15DE1EADFDC500E8FA1B /* macOS_CameraTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,7 +414,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mihailsalari.macOS-Camera";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -422,7 +428,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mihailsalari.macOS-Camera";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -437,7 +443,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mihailsalari.macOS-CameraTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/macOS Camera.app/Contents/MacOS/macOS Camera";
 			};
 			name = Debug;
@@ -453,7 +459,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mihailsalari.macOS-CameraTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/macOS Camera.app/Contents/MacOS/macOS Camera";
 			};
 			name = Release;
@@ -468,7 +474,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mihailsalari.macOS-CameraUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "macOS Camera";
 			};
 			name = Debug;
@@ -483,7 +489,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mihailsalari.macOS-CameraUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "macOS Camera";
 			};
 			name = Release;

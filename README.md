@@ -25,6 +25,10 @@ https://developer.apple.com/av-foundation/
 * AVCaptureSession
 * AVCaptureDevice
 
+### v2.0.0
+* CameraManagerProtocol
+* CameraManager
+* CameraManagerDelegate
 
 ## Bug Reports & Feature Requests
 
