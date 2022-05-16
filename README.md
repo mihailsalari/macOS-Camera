@@ -1,6 +1,11 @@
 # macOS-Camera
 Simple example how to run macOS Camera
 
+# Demo
+
+![Camera](https://user-images.githubusercontent.com/23311250/168668059-3924ee42-98ea-4ba4-8b2d-e4c2f718b7a4.gif)
+
+
 # AVFoundation
 
 https://developer.apple.com/av-foundation/
