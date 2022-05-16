@@ -22,6 +22,10 @@
 	<string>1</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Camera</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Microphone</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2017 Mihail Șalari. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
