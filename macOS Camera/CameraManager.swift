@@ -77,7 +77,7 @@ final class CameraManager: NSObject, CameraManagerProtocol {
     
     let devices = AVCaptureDevice.devices()
     
-    cameraDevice = devices.filter { $0.hasMediaType(.video) }.compactMap { $0 }.first
+    cameraDevice = devices.filter { $0.hasMediaType(.video) && $0.manufacturer=="Apple Inc." }.compactMap { $0 }.first
     
     if cameraDevice != nil  {
       do {
